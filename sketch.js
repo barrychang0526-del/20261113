@@ -26,11 +26,12 @@ let projectiles = []; // 建立能量球陣列
 
 const wallSize = 8; // 設定牆壁厚度
 
-function preload() { // 預先載入角色圖片
-  loadCharacterImage("stand", "start/100007.png"); // 載入站立動畫
-  loadCharacterImage("kick", "magic/10.png"); // 載入踢腿動畫
-  loadCharacterImage("crouch", "stop/10.png"); // 載入蹲下動畫
-} // 結束預載函式
+
+function preload() { // 預先載入角色的圖片精靈
+  loadCharacterImage("stand", "1/100007.png"); // 從1資料夾載入站立動畫
+  loadCharacterImage("kick", "1/10.png"); // 從1資料夾載入踢腿動畫
+  loadCharacterImage("crouch", "1/10.png"); // 暫時共用踢腿圖片，測試圖片載入
+} // 結束preload函式
 
 function loadCharacterImage(type, path) { // 建立圖片載入函式
   imageStatus[type] = "loading"; // 設定圖片為載入中
